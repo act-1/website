@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Act1</title>
+
+    <style>
+      @font-face {
+        font-family: "Atlas";
+        font-weight: 500;
+        font-display: fallback;
+        src: url("./fonts/atlas-medium-aaa.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Atlas";
+        font-weight: 700;
+        font-display: fallback;
+        src: url("./fonts/atlas-bold-aaa.woff2") format("woff2");
+      }
+
+      body {
+        background: #0f1316;
+        font-family: Atlas, Arial, Helvetica, sans-serif;
+        text-align: center;
+
+        color: #f5f5f5;
+      }
+
+      main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: calc(100vh - 70px);
+      }
+
+      #logo {
+        display: block;
+        margin-top: 60px;
+        animation: fadeIn 2s;
+      }
+
+      #title {
+        margin-bottom: 12px;
+        text-align: center;
+        animation: fadeIn 3.5s;
+      }
+
+      #subtitle {
+        margin-top: 0;
+        font-weight: 500;
+        animation: fadeIn 5s;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img id="logo" src="logo.svg" alt="ACT1" />
+      <h1 id="title">ככה זה מתחיל.</h1>
+      <h2 id="subtitle">בקרוב</h2>
+    </main>
+  </body>
+</html>
