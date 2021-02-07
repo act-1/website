@@ -3,73 +3,56 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./styles.css" rel="stylesheet" />
     <title>Act1</title>
-
-    <style>
-      @font-face {
-        font-family: "Atlas";
-        font-weight: 500;
-        font-display: fallback;
-        src: url("./fonts/atlas-medium-aaa.woff2") format("woff2");
-      }
-      @font-face {
-        font-family: "Atlas";
-        font-weight: 700;
-        font-display: fallback;
-        src: url("./fonts/atlas-bold-aaa.woff2") format("woff2");
-      }
-
-      body {
-        background: #0f1316;
-        font-family: Atlas, Arial, Helvetica, sans-serif;
-        text-align: center;
-
-        color: #f5f5f5;
-      }
-
-      main {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        height: calc(100vh - 70px);
-      }
-
-      #logo {
-        display: block;
-        margin-top: 60px;
-        animation: fadeIn 2s;
-      }
-
-      #title {
-        margin-bottom: 12px;
-        text-align: center;
-        animation: fadeIn 3.5s;
-      }
-
-      #subtitle {
-        margin-top: 0;
-        font-weight: 500;
-        animation: fadeIn 5s;
-      }
-
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-    </style>
   </head>
   <body>
     <main>
-      <img id="logo" src="logo.svg" alt="ACT1" />
-      <h1 id="title">ככה זה מתחיל.</h1>
-      <h2 id="subtitle">בקרוב</h2>
+      <header class="header">
+        <img class="logo" src="logo.svg" alt="ACT1" />
+        <h2 class="title">יוצאים להפגין.</h2>
+        <h2 class="title">ככה זה מתחיל.</h2>
+      </header>
+      <main>
+        <div class="about">
+          <h3 class="about-title bold red">
+            ברוכות הבאות לבית החדש של האקטיביזם בישראל
+          </h3>
+          <p class="about-text">
+            ACT1 הוא כלי הישרת אותנו, הגיבורים.ות במאבקים בהם אנחנו מאמינים.
+          </p>
+          <p class="about-text yellow">
+            אנחנו מאמינות ומאמינים בעולם שיוויני וצודק, בו נחיה בשלום וערבות
+            הדדית אחד עם השניה.
+          </p>
+          <p class="about-text">בגלל זה נצא ונפגין.<br />כי ככה זה מתחיל.</p>
+        </div>
+        <div class="newsletter-box">
+          <h3>ACT1 יוצא לאוויר בתחילת חודש מרץ</h3>
+          <h4>רוצות לקבל את האפליקצייה לפני כולם?</h4>
+        </div>
+        <div class="join-us">
+          <div class="roles-description">
+            <h3 class="roles-description-title">יצירתיות ומוכשרות?</h3>
+            <h4 class="roles-description-subtitle">אנו מחפשים לצוות שלנו:</h4>
+            <ul>
+              <li class="role-list-item">אנשי ונשות פרודקט</li>
+              <li class="role-list-item">מעצבים ומעצבות גראפיות</li>
+              <li class="role-list-item">מנהלת שטח ושיתופי פעולה</li>
+              <li class="role-list-item">אנשי מדיה חברתית</li>
+              <li class="role-list-item">מאיירות ומאיירים</li>
+              <li class="role-list-item">אנימטורים למיקרו אינטרקציות</li>
+              <li class="role-list-item">עורכי ועורכות וידיאו</li>
+            </ul>
+
+            <p class="about-text">
+              שלחו מייל ל-
+              <a href="mailto:team@act1.co.il">team@act1.co.il</a> ספרו לנו
+              עליכן, מה אתן עושות ולמה הייתן רוצות להצטרף
+            </p>
+          </div>
+        </div>
+      </main>
     </main>
   </body>
 </html>
