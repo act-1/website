@@ -12,12 +12,20 @@
   src: url("./fonts/atlas-bold-aaa.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/FiraCode-Bold.woff2") format("woff2");
+}
+
 body {
   background: #0f1316;
   font-family: Atlas, Arial, Helvetica, sans-serif;
   text-align: center;
   color: #f5f5f5;
   margin: 0;
+  overflow: none;
 }
 
 .header {
@@ -58,6 +66,7 @@ h3 {
 
 h4 {
   font-size: 22px;
+  font-weight: normal;
 }
 
 .title {
@@ -71,6 +80,14 @@ h4 {
   margin-top: 0;
   font-weight: 500;
   /* animation: fadeIn 5s; */
+}
+
+.screenshots-wrapper {
+  display: flex;
+}
+
+.app-screenshot {
+  height: 350px;
 }
 
 .about {
@@ -92,31 +109,69 @@ h4 {
   color: #2b2b2b;
 }
 
-.newsletter-box {
-  height: 240px;
-  margin: 24px 14px;
-  border-radius: 30px;
+.email-box-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.beta-invite-box {
+  margin: 24px 14px 0;
+  padding: 18px 12px;
+  border-radius: 4px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(180deg, #561b9c 0%, #4664ff 99%);
 }
 
-.join-us {
-  width: 100%;
-  padding: 0;
-  /* background-image: linear-gradient(
-    225deg,
-    #22e1ff 0%,
-    #1d8fe1 48%,
-    #625eb1 100%
-  ); */
+.beta-invite-box h3 {
+  margin: 0;
+}
+
+.beta-invite-box h4 {
+  margin: 16px 38px;
+  font-size: 20px;
+}
+
+.email-box-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.email-input {
+  width: 240px;
+  height: 35px;
+  padding: 0 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Atlas;
+  color: #222222;
+  text-align: center;
+}
+
+.email-submit {
+  width: 80px;
+  height: 35px;
+  border-radius: 2px;
+  background-color: #262731;
+  font-family: Atlas;
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  /* -webkit-appearance: none; */
+}
+
+.box {
+  padding: 32px 14px;
+  margin: 24px 14px;
 }
 
 .roles-description {
-  padding: 32px 14px;
-  margin-inline: 24px 14px;
   background-image: linear-gradient(0deg, #265880 0%, #09203f 100%);
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 40px;
+  border-radius: 4px;
 }
 
 .roles-description-title {
@@ -131,6 +186,68 @@ h4 {
 .role-list-item {
   font-size: 18px;
   text-align: right;
+}
+
+.developers-box {
+  background-image: linear-gradient(
+    180deg,
+    rgba(34, 34, 34, 0.92) 2%,
+    #000000 100%
+  );
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.developers-box h3 {
+  direction: ltr !important;
+  margin: 0;
+  font-family: "Fira Code";
+}
+
+.dev-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button-link {
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: background-color 0.13s;
+}
+
+.button-link:hover {
+  color: #fff;
+}
+
+#discord {
+  background-color: #8597f3;
+}
+
+#discord:hover {
+  background-color: #6b89e0;
+}
+
+#github {
+  background-color: #22272a;
+}
+
+#github:hover {
+  background-color: #22272a;
+}
+
+@media (min-width: 1024px) {
+  .join-us {
+    width: 100vw;
+    background-image: linear-gradient(
+      225deg,
+      #22e1ff 0%,
+      #1d8fe1 48%,
+      #625eb1 100%
+    );
+  }
 }
 
 @keyframes fadeIn {

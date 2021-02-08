@@ -69,3 +69,5 @@ dist
 .cache 
 
 .firebaserc
+
+.DS_Store
