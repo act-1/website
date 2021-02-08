@@ -19,6 +19,10 @@
   src: url("./fonts/FiraCode-Bold.woff2") format("woff2");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #0f1316;
   font-family: Atlas, Arial, Helvetica, sans-serif;
@@ -115,7 +119,7 @@ h4 {
 }
 
 .beta-invite-box {
-  margin: 24px 14px 0;
+  margin: 24px 12px 0;
   padding: 18px 12px;
   border-radius: 4px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
@@ -133,34 +137,39 @@ h4 {
 
 .email-box-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }
 
 .email-input {
   width: 240px;
   height: 35px;
+  margin-bottom: 12px;
   padding: 0 8px;
   border: none;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: Atlas;
   color: #222222;
   text-align: center;
 }
 
 .email-submit {
-  width: 80px;
+  width: 240px;
   height: 35px;
   border-radius: 2px;
   background-color: #262731;
   font-family: Atlas;
   color: #fff;
   border: none;
-  font-size: 12px;
-  /* -webkit-appearance: none; */
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.email-submit:hover {
+  background-color: #313131;
 }
 
 .box {
@@ -235,18 +244,67 @@ h4 {
 }
 
 #github:hover {
-  background-color: #22272a;
+  background-color: #333a3d;
 }
 
 @media (min-width: 1024px) {
   .join-us {
     width: 100vw;
+    display: grid;
+    grid-template-columns: 0.1fr 0.4fr 0.2fr 0.2fr 0.1fr;
+    grid-template-rows: 50px 50px 200px 150px 50px 50px;
     background-image: linear-gradient(
       225deg,
       #22e1ff 0%,
       #1d8fe1 48%,
       #625eb1 100%
     );
+  }
+
+  .roles-description {
+    padding-top: 35px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 6;
+    border-radius: 40px;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.81, 0.33, 0.27, 1.21);
+  }
+
+  .roles-description:hover {
+    transform: scale(1.13, 1.18);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .developers-box {
+    z-index: 0;
+    width: 87%;
+    grid-column: 2 / 5;
+    grid-row: 3 / 5;
+    border-radius: 40px;
+    transition: all 0.35s cubic-bezier(0.81, 0.33, 0.27, 1.21);
+  }
+
+  .developers-box:hover {
+    grid-column: 2 / 5;
+    width: 93%;
+    transform: rotate(-1deg);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .developers-box__content {
+    padding-right: 50%;
+  }
+}
+
+@media (min-width: 1330px) {
+  .join-us {
+    grid-template-columns: 0.3fr 0.4fr 0.2fr 0.2fr 0.3fr;
+  }
+}
+
+@media (min-width: 1600px) {
+  .join-us {
+    grid-template-columns: 0.42fr 0.4fr 0.2fr 0.2fr 0.42fr;
   }
 }
 
