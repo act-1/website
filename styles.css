@@ -96,7 +96,7 @@ h4 {
 }
 
 main {
-  animation: fadeIn 8s;
+  animation: fadeIn 8.3s;
 }
 
 .app-screenshot {
@@ -301,6 +301,11 @@ main {
     );
   }
 
+  .beta-invite-box {
+    width: 48%;
+    margin: 42px auto;
+  }
+
   .roles-description {
     padding-top: 35px;
     grid-column: 2 / 3;
@@ -353,12 +358,22 @@ main {
     z-index: 0;
   }
 
+  .beta-invite-box {
+    width: 37%;
+    margin: 42px auto;
+  }
+
   .join-us {
     grid-template-columns: 0.3fr 0.4fr 0.2fr 0.2fr 0.3fr;
   }
 }
 
 @media (min-width: 1600px) {
+  .beta-invite-box {
+    width: 26%;
+    margin: 42px auto;
+  }
+
   .join-us {
     grid-template-columns: 0.42fr 0.4fr 0.2fr 0.2fr 0.42fr;
   }
