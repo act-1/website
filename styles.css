@@ -84,7 +84,7 @@ h4 {
 }
 
 .title:last-of-type {
-  animation: fadeIn 5.5s;
+  animation: fadeIn 5.45s;
 }
 
 .screenshots-wrapper {
@@ -92,11 +92,11 @@ h4 {
   flex-direction: column;
   align-items: center;
   margin-top: 28px;
-  animation: fadeIn 8s;
+  animation: fadeIn 7.8s;
 }
 
 main {
-  animation: fadeIn 8.3s;
+  animation: fadeIn 8s;
   padding-right: env(safe-area-inset-right);
   padding-left: env(safe-area-inset-left);
 }
@@ -345,18 +345,18 @@ main {
 
 @media (min-width: 1330px) {
   .app-screenshot {
-    height: 570px;
+    height: 500px;
   }
 
   .app-screenshot:first-of-type {
     margin-left: 300px;
-    height: 500px;
+    height: 440px;
   }
 
   .app-screenshot:last-of-type {
     display: block;
     margin-right: 300px;
-    height: 500px;
+    height: 440px;
     z-index: 0;
   }
 
