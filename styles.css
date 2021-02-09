@@ -1,0 +1,463 @@
+@font-face {
+  font-family: "Atlas";
+  font-weight: 500;
+  font-display: fallback;
+  src: url("./fonts/atlas-medium-aaa.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Atlas";
+  font-weight: 700;
+  font-display: fallback;
+  src: url("./fonts/atlas-bold-aaa.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/FiraCode-Bold.woff2") format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f1316;
+  font-family: Atlas, Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #f5f5f5;
+  margin: 0;
+  overflow: none;
+}
+
+.header {
+  width: 100%;
+  padding: 60px 0;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #000;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  animation: fadeIn 2s;
+}
+
+.site-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 70px);
+}
+
+a {
+  color: #ffc281;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+a:hover {
+  color: #fab163;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  text-align: center;
+}
+
+.title:first-of-type {
+  animation: fadeIn 3.5s;
+}
+
+.title:last-of-type {
+  animation: fadeIn 5.45s;
+}
+
+.screenshots-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 28px 0;
+  animation: fadeIn 7.8s;
+}
+
+main {
+  animation: fadeIn 8s;
+  padding-right: env(safe-area-inset-right);
+  padding-left: env(safe-area-inset-left);
+}
+
+.app-screenshot {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.first-screenshot {
+  margin-left: 300px;
+  height: 400px;
+  display: none;
+}
+
+.second-screenshot {
+  z-index: 2;
+  height: 280px;
+  margin-left: 200px;
+}
+
+.middle-screenshot {
+  z-index: 3;
+  height: 320px;
+}
+
+.fourth-screenshot {
+  z-index: 1;
+  height: 280px;
+  margin-right: 200px;
+}
+
+.fifth-screenshot {
+  z-index: 0;
+  height: 400px;
+  display: none;
+}
+
+.about {
+  padding: 0 24px;
+}
+
+.about-title {
+  margin-bottom: 0;
+}
+
+.about-text {
+  margin: 8px;
+  line-height: 1.3;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.text-seperator {
+  color: #2b2b2b;
+}
+
+.email-box-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.beta-invite-box {
+  margin: 24px 12px 0;
+  padding: 18px 12px;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(180deg, #561b9c 0%, #4664ff 99%);
+}
+
+.beta-invite-box h3 {
+  margin: 0;
+}
+
+.beta-invite-box h4 {
+  margin: 16px 38px;
+  font-size: 20px;
+}
+
+.email-box-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-input {
+  width: 240px;
+  height: 35px;
+  margin-bottom: 12px;
+  padding: 0 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: Atlas;
+  color: #222222;
+  text-align: center;
+}
+
+.email-submit {
+  width: 240px;
+  height: 35px;
+  border-radius: 2px;
+  background-color: #262731;
+  font-family: Atlas;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.email-submit:hover {
+  background-color: #313131;
+}
+
+.box {
+  padding: 32px 14px;
+  margin: 24px 14px;
+}
+
+.roles-description {
+  background-image: linear-gradient(0deg, #265880 0%, #09203f 100%);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.roles-description-title {
+  margin: 0;
+}
+
+.roles-description-subtitle {
+  margin: 0;
+  font-size: 18px;
+}
+
+.role-list-item {
+  font-size: 18px;
+  text-align: right;
+}
+
+.developers-box {
+  background-image: linear-gradient(
+    180deg,
+    rgba(34, 34, 34, 0.92) 2%,
+    #000000 100%
+  );
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.developers-box h3 {
+  direction: ltr !important;
+  margin: 0;
+  font-family: "Fira Code";
+}
+
+.dev-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button-link {
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: background-color 0.13s;
+}
+
+.button-link:hover {
+  color: #fff;
+}
+
+#discord {
+  background-color: #8597f3;
+}
+
+#discord:hover {
+  background-color: #6b89e0;
+}
+
+#github {
+  background-color: #22272a;
+}
+
+#github:hover {
+  background-color: #333a3d;
+}
+
+.screenshots-wrapper {
+  display: grid;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .first-screenshot {
+    display: block;
+    margin-left: 490px;
+    height: 230px;
+  }
+
+  .second-screenshot {
+    margin-left: 300px;
+    height: 330px;
+  }
+
+  .middle-screenshot {
+    height: 400px;
+  }
+
+  .fourth-screenshot {
+    height: 330px;
+  }
+
+  .fifth-screenshot {
+    display: block;
+    height: 230px;
+    margin-right: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .join-us {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 0.1fr 0.4fr 0.2fr 0.2fr 0.1fr;
+    grid-template-rows: 50px 50px 200px 150px 50px 50px;
+    background-image: linear-gradient(
+      225deg,
+      #22e1ff 0%,
+      #1d8fe1 48%,
+      #625eb1 100%
+    );
+  }
+
+  .beta-invite-box {
+    width: 48%;
+    margin: 42px auto;
+  }
+
+  .roles-description {
+    padding-top: 35px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 6;
+    border-radius: 40px;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.81, 0.33, 0.27, 1.21);
+  }
+
+  .roles-description:hover {
+    transform: scale(1.13, 1.18);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .developers-box {
+    z-index: 0;
+    width: 87%;
+    grid-column: 2 / 5;
+    grid-row: 3 / 5;
+    border-radius: 40px;
+    transition: all 0.35s cubic-bezier(0.81, 0.33, 0.27, 1.21);
+  }
+
+  .developers-box:hover {
+    grid-column: 2 / 5;
+    width: 93%;
+    transform: rotate(-1deg);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .developers-box__content {
+    padding-right: 50%;
+  }
+}
+
+@media (min-width: 1330px) {
+  .about {
+    padding: 0 34vw;
+  }
+
+  .app-screenshot {
+    height: 600px;
+  }
+
+  .first-screenshot {
+    margin-left: 520px;
+    height: 360px;
+    z-index: 0;
+  }
+
+  .second-screenshot {
+    margin-left: 300px;
+    height: 440px;
+  }
+
+  .fourth-screenshot {
+    margin-right: 300px;
+    height: 440px;
+  }
+
+  .fifth-screenshot {
+    margin-right: 520px;
+    height: 360px;
+  }
+
+  .beta-invite-box {
+    width: 37%;
+    margin: 42px auto;
+  }
+
+  .join-us {
+    grid-template-columns: 0.3fr 0.4fr 0.2fr 0.2fr 0.3fr;
+  }
+}
+
+@media (min-width: 1600px) {
+  .beta-invite-box {
+    width: 26%;
+    margin: 42px auto;
+  }
+
+  .join-us {
+    grid-template-columns: 0.42fr 0.4fr 0.2fr 0.2fr 0.42fr;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  /* .screenshots-wrapper {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .app-screenshot {
+    height: 420px;
+    margin: 0 12px;©
+  } */
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/** Utilities **/
+.red {
+  color: #ec534b;
+}
+
+.yellow {
+  color: #ffae00;
+}
+
+.bold {
+  font-weight: bold;
+}

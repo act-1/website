@@ -65,4 +65,9 @@ node_modules/
 # dotenv environment variables file
 .env
 
+dist
+.cache 
+
 .firebaserc
+
+.DS_Store
