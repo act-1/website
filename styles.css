@@ -102,20 +102,37 @@ main {
 }
 
 .app-screenshot {
-  max-width: 320px;
-  margin-bottom: 28px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.first-screenshot {
+  margin-left: 300px;
+  height: 400px;
+  display: none;
+}
+
+.second-screenshot {
+  z-index: 2;
+  height: 280px;
+  margin-left: 200px;
 }
 
 .middle-screenshot {
   z-index: 3;
+  height: 320px;
 }
 
 .fourth-screenshot {
   z-index: 1;
+  height: 280px;
+  margin-right: 200px;
 }
 
 .fifth-screenshot {
   z-index: 0;
+  height: 400px;
+  display: none;
 }
 
 .about {
@@ -278,18 +295,29 @@ main {
 }
 
 @media (min-width: 768px) {
-  .app-screenshot {
-    height: 470px;
-  }
-
   .first-screenshot {
-    margin-left: 300px;
-    height: 400px;
+    display: block;
+    margin-left: 490px;
+    height: 230px;
   }
 
   .second-screenshot {
     margin-left: 300px;
+    height: 330px;
+  }
+
+  .middle-screenshot {
     height: 400px;
+  }
+
+  .fourth-screenshot {
+    height: 330px;
+  }
+
+  .fifth-screenshot {
+    display: block;
+    height: 230px;
+    margin-right: 400px;
   }
 }
 
@@ -388,22 +416,6 @@ main {
 }
 
 @media (min-width: 1600px) {
-  .app-screenshot {
-    height: 780px;
-  }
-
-  .app-screenshot:first-of-type {
-    margin-left: 420px;
-    height: 610px;
-  }
-
-  .app-screenshot:last-of-type {
-    display: block;
-    margin-right: 420px;
-    height: 610px;
-    z-index: 0;
-  }
-
   .beta-invite-box {
     width: 26%;
     margin: 42px auto;
@@ -415,15 +427,15 @@ main {
 }
 
 @media (orientation: landscape) and (max-width: 1000px) {
-  .screenshots-wrapper {
+  /* .screenshots-wrapper {
     flex-direction: row-reverse;
     justify-content: center;
   }
 
   .app-screenshot {
     height: 420px;
-    margin: 0 12px;
-  }
+    margin: 0 12px;©
+  } */
 }
 @keyframes fadeIn {
   0% {
