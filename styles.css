@@ -295,10 +295,24 @@ main {
 }
 
 @media (min-width: 768px) {
+  :root {
+    --screenshot-hover-margin: 30px;
+    --screenshot-hover-deg: 10deg;
+  }
+
+  .app-screenshot {
+    transition: all 0.4s;
+  }
+
   .first-screenshot {
     display: block;
     margin-left: 490px;
     height: 230px;
+  }
+
+  .first-screenshot:hover {
+    transform: scale(1.2) rotate(var(--screenshot-hover-deg))
+      translateX(var(--screenshot-hover-margin));
   }
 
   .second-screenshot {
@@ -306,12 +320,26 @@ main {
     height: 330px;
   }
 
+  .second-screenshot:hover {
+    transform: scale(1.1) rotate(calc(var(--screenshot-hover-deg) - 5deg))
+      translateX(var(--screenshot-hover-margin));
+  }
+
   .middle-screenshot {
     height: 400px;
   }
 
+  .middle-screenshot:hover {
+    transform: scale(1.1);
+  }
+
   .fourth-screenshot {
     height: 330px;
+  }
+
+  .fourth-screenshot:hover {
+    transform: scale(1.1) rotate(calc(4deg - var(--screenshot-hover-deg)))
+      translateX(calc(-11px - var(--screenshot-hover-margin)));
   }
 
   .fifth-screenshot {
@@ -319,9 +347,19 @@ main {
     height: 230px;
     margin-right: 400px;
   }
+
+  .fifth-screenshot:hover {
+    transform: scale(1.2) rotate(calc(2deg - var(--screenshot-hover-deg)))
+      translateX(calc(5px - var(--screenshot-hover-margin)));
+  }
 }
 
 @media (min-width: 1024px) {
+  :root {
+    --screenshot-hover-margin: 50px;
+    --screenshot-hover-deg: 8deg;
+  }
+
   .join-us {
     width: 100vw;
     display: grid;
@@ -376,6 +414,10 @@ main {
 }
 
 @media (min-width: 1330px) {
+  :root {
+    --screenshot-hover-margin: 60px;
+  }
+
   .about {
     padding: 0 34vw;
   }
@@ -416,6 +458,10 @@ main {
 }
 
 @media (min-width: 1600px) {
+  :root {
+    --screenshot-hover-margin: 70px;
+  }
+
   .beta-invite-box {
     width: 26%;
     margin: 42px auto;
