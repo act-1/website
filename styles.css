@@ -197,20 +197,23 @@ main {
 }
 
 .email-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 240px;
-  height: 35px;
+  height: 45px;
   border-radius: 2px;
   background-color: #262731;
   font-family: Atlas;
   color: #fff;
   border: none;
-  font-size: 15px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .email-submit:hover {
-  background-color: #313131;
+  color: #fff;
+  background-color: #3a3a3a;
 }
 
 .box {

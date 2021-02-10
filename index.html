@@ -8,14 +8,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
     <link href="./styles.css" rel="stylesheet" />    
-    <title>Act1</title>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-NLMRK1P5FQ');
-    </script>
+    <title>Act1 - יוצאים להפגין</title>
+    <meta name="description" content="אפליקציית האקטיביזם של ישראל. כל המאבקים וההפגנות במקום אחד."/>
+
+    <meta property="og:title" content="Act1">
+    <meta property="og:description" content="יוצאים להפגין. ככה זה מתחיל.">
+    <meta property="og:image" content="/assets/fb-thumb.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://res.cloudinary.com/act1/image/upload/v1612943318/meta/twitter-thumb_lqj9vq.png" />
+    <meta name="twitter:site" content="@act1coil">
   </head>
   <body>
     <div class="site-wrapper">
@@ -37,16 +38,15 @@
             הבית החדש של האקטיביזם 
           </h3>
           <p class="about-text"> מערכה ראשונה היא החלק הראשון היוצר הכרות עם הגיבור.ה היוצא.ת לפעול</p>
-          <p class="about-text">אנו רואים את ACT1 ככלי שישרת אותנו במאבקים הקרובים לליבנו, בהם אנו מאמינים</p>
+          <p class="about-text">אנו רואים את ACT1 ככלי שישרת אותנו במאבקים הקרובים לליבנו, בהם אנחנו מאמינים</p>
           <p class="about-text yellow">אנחנו מאמינות ומאמינים בעולם שיוויני וצודק, בו נחיה בשלום וערבות הדדית אחד עם השניה</p>
           <p class="about-text">כל שינוי מתחיל במערכה ראשונה<br />בגלל זה נצא ונפגין<br/>כי ככה זה מתחיל</p>
         </div>
         <div class="beta-invite-box">
           <h3>ACT1 תצא לאוויר במהלך חודש מרץ</h3>
-          <h4>רוצות לקבל את האפליקצייה לפני כולם?</h4>
+          <h4>רוצות לעזור לבדוק את האפליקציה לפני שהיא יוצאת?</h4>
           <div class="email-box-wrapper">
-            <input type="email" placeholder="כתובת מייל" class="email-input" />
-            <button type="submit" class="email-submit">בקשת הזמנה</button>
+            <a type="submit" class="email-submit" id="beta-signup-btn" href="https://act-1.typeform.com/to/MO3DKKvm" target="_blank">בקשת הזמנה</a>
           </div>
         </div>
         <div class="join-us">
@@ -100,5 +100,16 @@
         </div>
       </div>
     </main>
+    <script async defer src="https://sa.act1.co.il/latest.js"></script>
+    <noscript><img src="https://sa.act1.co.il/noscript.gif" alt=""/></noscript>
+    <script>
+      const betaBtn = document.getElementById('beta-signup-btn');
+      const githubBtn = document.getElementById('github');
+      const discordBtn = document.getElementById('discord-btn');
+
+      betaBtn.addEventListener('click', () => sa_event("click_beta"))
+      githubBtn.addEventListener('click', () => sa_event("click_github"))
+      discordBtn.addEventListener('click', () => sa_event("click_discord"))
+    </script>
   </body>
 </html>
