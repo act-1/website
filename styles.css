@@ -29,11 +29,27 @@ body {
   text-align: center;
   color: #f5f5f5;
   margin: 0;
-  overflow: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: fixed;
+  animation: lock-scroll 7.8s linear forwards;
+}
+
+@keyframes lock-scroll {
+  to {
+    position: static;
+  }
 }
 
 .header {
   width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-shrink: 0;
   padding: 60px 0;
   margin: 0 auto;
   text-align: center;
@@ -93,6 +109,18 @@ h4 {
   align-items: center;
   margin: 28px 0;
   animation: fadeIn 7.8s;
+}
+
+.scroll-down {
+  max-height: 10%;
+  flex-basis: 5%;
+  flex-shrink: 0.5;
+  animation: fadeIn 9.5s ease-out;
+}
+@media (min-width: 1330px) {
+  .scroll-down {
+    display: none;
+  }
 }
 
 main {
@@ -388,6 +416,8 @@ main {
     border-radius: 40px;
     z-index: 1;
     transition: all 0.3s cubic-bezier(0.81, 0.33, 0.27, 1.21);
+    transition-property: transform, box-shadow;
+    will-change: transform, box-shadow;
   }
 
   .roles-description:hover {
@@ -402,6 +432,8 @@ main {
     grid-row: 3 / 5;
     border-radius: 40px;
     transition: all 0.35s cubic-bezier(0.81, 0.33, 0.27, 1.21);
+    transition-property: transform, box-shadow, width;
+    will-change: transform, box-shadow;
   }
 
   .developers-box:hover {
@@ -475,17 +507,6 @@ main {
   }
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
-  /* .screenshots-wrapper {
-    flex-direction: row-reverse;
-    justify-content: center;
-  }
-
-  .app-screenshot {
-    height: 420px;
-    margin: 0 12px;©
-  } */
-}
 @keyframes fadeIn {
   0% {
     opacity: 0;
