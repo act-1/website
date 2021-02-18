@@ -18,7 +18,7 @@
     <meta name="twitter:image" content="https://res.cloudinary.com/act1/image/upload/v1612943318/meta/twitter-thumb_lqj9vq.png" />
     <meta name="twitter:site" content="@act1coil">
   </head>
-  <body>
+  <body data-faded-in="false">
     <div class="site-wrapper">
       <header class="header">
         <div>
@@ -110,6 +110,11 @@
       window.onload = function () {
         window.scrollTo(0, 0);
       }
+      
+      setTimeout(()=>{
+        document.body.setAttribute('data-faded-in', "true")
+      },4000)
+
       const betaBtn = document.getElementById('beta-signup-btn');
       const githubBtn = document.getElementById('github');
       const discordBtn = document.getElementById('discord-btn');
