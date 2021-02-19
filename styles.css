@@ -24,16 +24,23 @@
 }
 
 body {
+  min-width: 100vw;
+  min-height: 100vh;
   background: #0f1316;
   font-family: Atlas, Arial, Helvetica, sans-serif;
   text-align: center;
   color: #f5f5f5;
   margin: 0;
-  overflow: none;
+  overflow-x: hidden;
 }
 
 .header {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-shrink: 0;
   padding: 60px 0;
   margin: 0 auto;
   text-align: center;
@@ -93,6 +100,45 @@ h4 {
   align-items: center;
   margin: 28px 0;
   animation: fadeIn 7.8s;
+}
+
+.scroll-down {
+  display: none;
+  max-height: 10%;
+  flex-basis: 5%;
+  flex-shrink: 0.5;
+  filter: contrast(0%);
+  opacity: 0;
+}
+
+@media (max-width: 1024px) {
+  body[data-faded-in="true"] .scroll-down {
+    opacity: 1;
+    animation: fadeIn 3s ease-out;
+  }
+  .scroll-down {
+    display: block;
+  }
+
+  .header {
+    height: 100vh;
+  }
+
+  body[data-faded-in="false"] {
+    overflow-y: scroll;
+    position: fixed;
+  }
+}
+
+@media (min-width: 1330px) {
+  .header {
+    height: 100vh;
+  }
+
+  body[data-faded-in="false"] {
+    overflow-y: scroll;
+    position: fixed;
+  }
 }
 
 main {
@@ -388,6 +434,8 @@ main {
     border-radius: 40px;
     z-index: 1;
     transition: all 0.3s cubic-bezier(0.81, 0.33, 0.27, 1.21);
+    transition-property: transform, box-shadow;
+    will-change: transform, box-shadow;
   }
 
   .roles-description:hover {
@@ -402,6 +450,8 @@ main {
     grid-row: 3 / 5;
     border-radius: 40px;
     transition: all 0.35s cubic-bezier(0.81, 0.33, 0.27, 1.21);
+    transition-property: transform, box-shadow, width;
+    will-change: transform, box-shadow;
   }
 
   .developers-box:hover {
@@ -475,17 +525,6 @@ main {
   }
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
-  /* .screenshots-wrapper {
-    flex-direction: row-reverse;
-    justify-content: center;
-  }
-
-  .app-screenshot {
-    height: 420px;
-    margin: 0 12px;©
-  } */
-}
 @keyframes fadeIn {
   0% {
     opacity: 0;
